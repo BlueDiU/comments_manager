@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap');
+
+:root {
+  --navbar-bg: #2980b9;
+  --navbar-color: #f7f9f9;
+
+  --dark-body: #212f3d;
+  --dark-card: #2c3e50;
+  --white: #ecf0f1;
+}
+
+html {
+  transition: all 400ms ease-in-out;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.header {
+  margin: 0;
+  padding: 1.5rem;
+  background-color: var(--navbar-bg);
+  color: var(--navbar-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.header input {
+  margin: 0;
+  outline: 0;
+  padding: 0.5rem;
+  width: 40%;
+  border-radius: 5px;
+  border: 0;
+  background-color: #f0f3f4;
+}
+
+.comments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+  column-gap: 30px;
+  row-gap: 30px;
+  margin: 3rem;
+}
+
+.comment {
+  /* background-color: var(--dark-card);
+  color: var(--white); */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border-radius: 10px;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.information {
+  border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+.information strong {
+  letter-spacing: 1.1px;
+}
+.information p {
+  text-align: left;
+}
+
+@media (max-width: 456px) {
+  .header {
+    flex-direction: column;
+  }
+  .header input {
+    margin-top: 20px;
+    width: 90%;
+  }
+}
