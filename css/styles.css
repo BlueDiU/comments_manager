@@ -84,25 +84,22 @@ body {
   text-align: left;
 }
 
-.comment .numberID {
+.numberID {
   position: absolute;
   font-weight: bold;
   color: black;
   top: -7px;
-  left: -14px;
-  z-index: -1;
-  bottom: 12.9rem;
-  z-index: 1;
+  left: -8px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  font-size: 12px;
-  background-color: #d6eaf8;
+  font-size: 11px;
+  border: 0.5px solid rgb(5, 5, 5, 0.3);
   width: 10px;
   height: 10px;
-  border-radius: 40%;
+  border-radius: 50%;
   text-align: center;
-  padding: 20px;
+  padding: 18px;
 }
 
 /* Dark mode button */
@@ -192,6 +189,11 @@ body {
 .dark-mode .dark-theme-btn:hover {
   background-color: var(--navbar-color);
   color: var(--dark-card);
+}
+
+.dark-mode .numberID {
+  color: whitesmoke;
+  border: 0.5px solid rgb(255, 255, 255, 0.4);
 }
 
 @media (max-width: 456px) {

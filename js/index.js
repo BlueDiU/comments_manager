@@ -5,6 +5,6 @@ const d = document;
 
 d.addEventListener('DOMContentLoaded', (e) => {
   showComments('comments');
-
-  darkTheme('.dark-theme-btn', 'dark-mode', 'dark-mode-card');
 });
+
+darkTheme('.dark-theme-btn', 'dark-mode', 'dark-mode-card');
