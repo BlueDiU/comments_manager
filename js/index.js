@@ -1,2 +1,8 @@
-// API: https://jsonplaceholder.typicode.com/comments
-console.log('HOLA');
+import { showComments } from './routers/app.js';
+
+const d = document;
+
+d.addEventListener('DOMContentLoaded', (e) => {
+  console.log('Hola');
+  showComments('comments');
+});
