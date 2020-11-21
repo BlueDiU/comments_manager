@@ -62,8 +62,7 @@ body {
 }
 
 .comment {
-  /* background-color: var(--dark-card);
-  color: var(--white); */
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -85,10 +84,32 @@ body {
   text-align: left;
 }
 
+.comment .numberID {
+  position: absolute;
+  font-weight: bold;
+  color: black;
+  top: -7px;
+  left: -14px;
+  z-index: -1;
+  bottom: 12.9rem;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  background-color: #d6eaf8;
+  width: 10px;
+  height: 10px;
+  border-radius: 40%;
+  text-align: center;
+  padding: 20px;
+}
+
 /* Dark mode button */
 .dark-theme-btn {
   cursor: pointer;
   position: fixed;
+  z-index: 999;
   bottom: 1vh;
   left: 1vw;
   width: 3.5rem;
@@ -112,6 +133,7 @@ body {
 .scroll-top-btn {
   cursor: pointer;
   position: fixed;
+  z-index: 999;
   bottom: 1vw;
   right: 1vh;
   width: 3.5rem;
@@ -135,6 +157,41 @@ body {
 .hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+/* Dark mode */
+.dark-mode {
+  background-color: var(--dark-body);
+  color: var(--white);
+}
+
+.dark-mode .comment {
+  background-color: var(--dark-card);
+  color: var(--white);
+}
+
+.dark-mode .information {
+  border-top: 0.5px solid rgb(255, 251, 251, 0.4);
+}
+
+.dark-mode .scroll-top-btn {
+  background-color: #566573;
+  color: var(--white);
+}
+
+.dark-mode .scroll-top-btn:hover {
+  background-color: var(--navbar-color);
+  color: var(--dark-card);
+}
+
+.dark-mode .dark-theme-btn {
+  background-color: #566573;
+  color: var(--white);
+}
+
+.dark-mode .dark-theme-btn:hover {
+  background-color: var(--navbar-color);
+  color: var(--dark-card);
 }
 
 @media (max-width: 456px) {

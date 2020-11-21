@@ -10,7 +10,7 @@ export async function showComments(comments_container) {
   const $comments = d.getElementById(comments_container);
   const fragment = d.createDocumentFragment();
 
-  if (comments.lengt > 0) {
+  if (comments.length > 0) {
     comments.forEach((comment) => {
       const { name, email, body } = comment;
 
@@ -18,6 +18,7 @@ export async function showComments(comments_container) {
       $article.classList.add('comment');
 
       $article.innerHTML = `
+       <div class="numberID">${comment.id}</div>
         <h3>${name}</h3>
         <div class="information">
             <p><strong>Email: </strong> ${email}</p>
@@ -36,17 +37,14 @@ export async function showComments(comments_container) {
     $comments.innerHTML = `<h2 style="text-align: center;">🚨 content could not be displayed ⚠️</h2>`;
   }
 }
-
 /* 
-<article class="comment">
-            <h3>id labore ex et quam laborum</h3>
-            <div class="information">
-                <p><strong>Email: </strong> Eliseo@gardner.biz</p>
-                <p><strong>Description: </strong>
-                    laudantium enim quasi est quidem magnam voluptate ipsam eos tempora
-                    quo necessitatibus dolor quam autem quasi reiciendis
-                    et nam sapiente accusantium
-                </p>
-            </div>
-        </article>
-         */
+
+ <h3>${name}</h3>
+        <div class="information">
+            <p><strong>Email: </strong> ${email}</p>
+            <p><strong>Description: </strong>
+                ${body}    
+            </p>
+        </div>
+
+*/
