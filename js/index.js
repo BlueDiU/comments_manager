@@ -5,7 +5,7 @@ import { searchFilter } from './routers/search_filter.js';
 
 const d = document;
 
-d.addEventListener('DOMContentLoaded', (e) => {
+d.addEventListener('DOMContentLoaded', () => {
   showComments('comments');
   scrollTopBtn('.scroll-top-btn');
   searchFilter('.comment-filter', '.comment h3');
