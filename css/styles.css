@@ -13,7 +13,6 @@ html {
   transition: all 400ms ease-in-out;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  scroll-behavior: smooth;
 }
 
 *,
@@ -28,6 +27,9 @@ body {
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   margin: 0;
   padding: 1.5rem;
   background-color: var(--navbar-bg);
@@ -70,6 +72,7 @@ body {
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   padding: 0 2rem;
+  transition: all 300ms ease-in-out;
 }
 
 .information {
@@ -100,6 +103,12 @@ body {
   border-radius: 50%;
   text-align: center;
   padding: 18px;
+}
+
+.filter {
+  visibility: hidden;
+  opacity: 0;
+  order: 1;
 }
 
 /* Dark mode button */
