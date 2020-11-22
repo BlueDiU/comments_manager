@@ -11,4 +11,4 @@ d.addEventListener('DOMContentLoaded', () => {
   searchFilter('.comment-filter', '.comment h3');
 });
 
-darkTheme('.dark-theme-btn', 'dark-mode', 'dark-mode-card');
+darkTheme('.dark-theme-btn', 'dark-mode');
